@@ -13,7 +13,7 @@
           <img class="home" src="icons/github.svg" alt="home" />
         </div>
         <div class="search">
-          <label class="search__label search__label--slash">
+          <label tabindex="1" class="search__label search__label--dark">
             <input
               type="text"
               name="search"
@@ -39,7 +39,7 @@
           <span class="caret"></span>
         </div>
         <div class="icon icon--caret">
-          <img class="profile" src="icons/profile.jpg" alt="settings" />
+          <img class="user" src="icons/profile.jpg" alt="settings" />
           <span class="caret"></span>
         </div>
       </div>
@@ -73,6 +73,65 @@
           <span class="topbar__item__text">Packages</span>
         </div>
       </div>
+    </div>
+    <div class="body">
+      <aside>
+        <div class="profile">
+          <img
+            src="icons/profile.jpg"
+            alt="profile image"
+            class="profile__img"
+          />
+          <div class="emoji">
+            <img class="emoji__img" src="icons/emoji.png" alt="emoji" />
+            <span class="emoji__txt">Making the code a better place</span>
+          </div>
+        </div>
+        <div class="name">
+          <div class="name__full">Confidence Okoghenun</div>
+          <div class="name__username">cokoghenun</div>
+        </div>
+        <div class="bio">Software Engineer | YouTuber</div>
+      </aside>
+      <main>
+        <div class="repo__top">
+          <div class="search">
+            <label tabindex="1" class="search__label">
+              <input
+                type="text"
+                name="search"
+                class="search__input"
+                placeholder="Find a repository..."
+              />
+            </label>
+          </div>
+        </div>
+        <div class="repo__item">
+          <div class="repo__item__left">
+            <div class="repo__item__name">open-song-database-api</div>
+            <div class="repo__item__desc">
+              Welcome to the repository of the Open Song Database
+            </div>
+            <div class="repo__item__stats">
+              <div class="repo__item__lang">
+                <span class="repo__item__lang__color"></span>
+                <span class="repo__item__lang__text"> JavaScript</span>
+              </div>
+              <div class="repo__item__stars">
+                <img src="icons/star.svg" alt="star" />
+                <span>1</span>
+              </div>
+              <div class="repo__item__upate">Updated 13 days ago</div>
+            </div>
+          </div>
+          <div class="repo__item__right">
+            <button>
+              <img src="icons/star.svg" alt="star" />
+              <span>Star</span>
+            </button>
+          </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>
