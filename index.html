@@ -8,43 +8,104 @@
   </head>
   <body>
     <nav>
-      <div class="left">
-        <div>
-          <img class="home" src="icons/github.svg" alt="home" />
+      <div class="nav__big">
+        <div class="left">
+          <div>
+            <img class="home" src="icons/github.svg" alt="home" />
+          </div>
+          <div class="search">
+            <label tabindex="1" class="search__label search__label--dark">
+              <input
+                type="text"
+                name="search"
+                class="search__input"
+                placeholder="Search or jump to.."
+              />
+              <img src="icons/slash.svg" alt="keyboard" />
+            </label>
+          </div>
+          <ul class="links">
+            <li>Pull requests</li>
+            <li>Issues</li>
+            <li>Marketplace</li>
+            <li>Explore</li>
+          </ul>
         </div>
-        <div class="search">
-          <label tabindex="1" class="search__label search__label--dark">
-            <input
-              type="text"
-              name="search"
-              class="search__input"
-              placeholder="Search or jump to.."
-            />
-            <img src="icons/slash.svg" alt="keyboard" />
-          </label>
+        <div class="right">
+          <div class="icon icon--bell">
+            <img src="icons/bell.svg" alt="notificaitons" />
+            <span class="dot dot--blue"></span>
+          </div>
+          <div class="icon icon--caret icon--middle">
+            <img src="icons/plus.svg" alt="options" />
+            <span class="caret"></span>
+          </div>
+          <div class="icon icon--caret">
+            <img class="user" src="icons/profile.jpg" alt="settings" />
+            <span class="caret"></span>
+          </div>
         </div>
-        <ul class="links">
-          <li>Pull requests</li>
-          <li>Issues</li>
-          <li>Marketplace</li>
-          <li>Explore</li>
-        </ul>
       </div>
-      <div class="right">
-        <div class="icon icon--bell">
-          <img src="icons/bell.svg" alt="notificaitons" />
-          <span class="dot dot--blue"></span>
+      <div class="nav__small">
+        <div class="nav__small__top">
+          <img class="breadcrum" src="icons/breadcrum.svg" alt="home" />
+          <img class="home" src="icons/github.svg" alt="home" />
+
+          <div class="icon icon--bell">
+            <img src="icons/bell.svg" alt="notificaitons" />
+            <span class="dot dot--blue"></span>
+          </div>
         </div>
-        <div class="icon icon--caret icon--middle">
-          <img src="icons/plus.svg" alt="options" />
-          <span class="caret"></span>
-        </div>
-        <div class="icon icon--caret">
-          <img class="user" src="icons/profile.jpg" alt="settings" />
-          <span class="caret"></span>
+        <div class="nav__small__bottom hide">
+          <div class="search">
+            <label tabindex="1" class="search__label search__label--dark">
+              <input
+                type="text"
+                name="search"
+                class="search__input"
+                placeholder="Search or jump to.."
+              />
+              <img src="icons/slash.svg" alt="keyboard" />
+            </label>
+          </div>
+          <ul class="links">
+            <li>Dashbard</li>
+            <li>Pull requests</li>
+            <li>Issues</li>
+            <li>Marketplace</li>
+            <li>Explore</li>
+            <li>Settings</li>
+            <li class="img">
+              <img src="icons/profile.jpg" alt="profile" />
+              <span>cokoghenun</span>
+            </li>
+            <li class="img">
+              <img src="icons/door.svg" alt="sign out" />
+              <span>Sign out</span>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
+    <div class="tprofile">
+      <div class="tintro">
+        <img
+          src="icons/profile.jpg"
+          alt="profile image"
+          class="tprofile__img"
+        />
+        <div class="tname">
+          <div class="tname__full">Confidence Okoghenun</div>
+          <div class="tname__username">cokoghenun</div>
+        </div>
+      </div>
+      <div class="temoji">
+        <img class="temoji__img" src="icons/emoji.png" alt="emoji" />
+        <span class="temoji__txt">Making the code a better place</span>
+      </div>
+      <div class="tbio">Software Engineer | YouTuber</div>
+    </div>
+
     <div class="topbar">
       <div class="topbar__left"></div>
       <div class="topbar__right">
@@ -135,4 +196,11 @@
       </main>
     </div>
   </body>
+  <script>
+    const nav = document.querySelector('.breadcrum');
+    const options = document.querySelector('.nav__small__bottom');
+    nav.addEventListener('click', () => {
+      options.classList.toggle('hide');
+    });
+  </script>
 </html>
