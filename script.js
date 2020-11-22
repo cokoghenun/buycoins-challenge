@@ -24,10 +24,8 @@ menu.addEventListener('click', () => {
 });
 
 const getData = async () => {
-  const token =
-    location.protocol === 'http'
-      ? '3d49f039df0b23704e3d65e7b0135f6d25d2577b'
-      : '9014b29d11fa828cfdced1760d070bfa10fae70e';
+  console.log(location);
+  const token = location.search.replace('?token=', '');
   const gql = {
     query:
       '{\n  user(login: "cokoghenun") {\n    bio\n    avatarUrl\n    name\n    login\n   status {\n      message\n      emojiHTML\n    }\n    repositories(orderBy: {field: CREATED_AT, direction: DESC}, first: 20) {\n      totalCount\n      nodes {\n        name\n        url\n        description\n        primaryLanguage {\n          color\n          name\n        }\n        stargazers {\n          totalCount\n        }\n      }\n    }\n  }\n}\n',
@@ -39,7 +37,7 @@ const getData = async () => {
     method: 'POST',
     body: JSON.stringify(gql),
     headers: {
-      Authorization: `bearer 2a58d8f405296977d5f7f7e0f5c94c7936250a88`,
+      Authorization: `bearer ${token}`,
     },
   })
     .then((res) => res.json())
