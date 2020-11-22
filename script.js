@@ -39,7 +39,7 @@ const getData = async () => {
     method: 'POST',
     body: JSON.stringify(gql),
     headers: {
-      Authorization: `bearer c4a50f2cfc16397901264b488411e328c14322ed`,
+      Authorization: `bearer 2a58d8f405296977d5f7f7e0f5c94c7936250a88`,
     },
   })
     .then((res) => res.json())
