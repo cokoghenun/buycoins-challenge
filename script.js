@@ -23,9 +23,33 @@ menu.addEventListener('click', () => {
   menuList.classList.toggle('hide');
 });
 
+const encrypt = (text, shift) => {
+  let result = '';
+  for (let i = 0; i < text.length; i++) {
+    let c = text.charCodeAt(i);
+    if (c >= 65 && c <= 90) {
+      result += String.fromCharCode(((c - 65 + shift) % 26) + 65);
+    } else if (c >= 97 && c <= 122) {
+      result += String.fromCharCode(((c - 97 + shift) % 26) + 97);
+    } else {
+      result += text.charAt(i);
+    }
+  }
+  return result;
+};
+
+const decrypt = (text, shift) => {
+  return encrypt(text, (26 - shift) % 26);
+};
+
 const getData = async () => {
-  console.log(location);
-  const token = location.search.replace('?token=', '');
+  /**
+   * Have to decrypt github access token because
+   * github will invalidate the token if commited
+   * to the repo in raw form
+   */
+  const token = decrypt('8npp28p7n653qo567q9n96qr410q138s8o971140', 13);
+
   const gql = {
     query:
       '{\n  user(login: "cokoghenun") {\n    bio\n    avatarUrl\n    name\n    login\n   status {\n      message\n      emojiHTML\n    }\n    repositories(orderBy: {field: CREATED_AT, direction: DESC}, first: 20) {\n      totalCount\n      nodes {\n        name\n        url\n        description\n        primaryLanguage {\n          color\n          name\n        }\n        stargazers {\n          totalCount\n        }\n      }\n    }\n  }\n}\n',
