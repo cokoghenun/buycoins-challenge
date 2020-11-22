@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>BuyCoins</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <title>BuyCoins Challenge</title>
   </head>
   <body>
     <nav>
@@ -41,7 +42,7 @@
             <span class="caret"></span>
           </div>
           <div class="icon icon--caret">
-            <img class="user" src="icons/profile.jpg" alt="settings" />
+            <img class="user" alt="settings" />
             <span class="caret"></span>
           </div>
         </div>
@@ -76,7 +77,7 @@
             <li>Explore</li>
             <li>Settings</li>
             <li class="img">
-              <img src="icons/profile.jpg" alt="profile" />
+              <img alt="profile" />
               <span>cokoghenun</span>
             </li>
             <li class="img">
@@ -89,21 +90,17 @@
     </nav>
     <div class="tprofile">
       <div class="tintro">
-        <img
-          src="icons/profile.jpg"
-          alt="profile image"
-          class="tprofile__img"
-        />
+        <img alt="profile image" class="tprofile__img" />
         <div class="tname">
-          <div class="tname__full">Confidence Okoghenun</div>
-          <div class="tname__username">cokoghenun</div>
+          <div class="tname__full"></div>
+          <div class="tname__username"></div>
         </div>
       </div>
       <div class="temoji">
-        <img class="temoji__img" src="icons/emoji.png" alt="emoji" />
-        <span class="temoji__txt">Making the code a better place</span>
+        <span class="temoji__img"></span>
+        <span class="temoji__txt"></span>
       </div>
-      <div class="tbio">Software Engineer | YouTuber</div>
+      <div class="tbio"></div>
     </div>
 
     <div class="topbar">
@@ -120,7 +117,7 @@
             class="topbar__item__icon"
           />
           <span class="topbar__item__text">Repositories</span>
-          <span class="topbar__item__count">84</span>
+          <span class="topbar__item__count"></span>
         </div>
         <div class="topbar__item">
           <img
@@ -139,21 +136,17 @@
     <div class="body">
       <aside>
         <div class="profile">
-          <img
-            src="icons/profile.jpg"
-            alt="profile image"
-            class="profile__img"
-          />
+          <img alt="profile image" class="profile__img" />
           <div class="emoji">
-            <img class="emoji__img" src="icons/emoji.png" alt="emoji" />
-            <span class="emoji__txt">Making the code a better place</span>
+            <span class="emoji__img"></span>
+            <span class="emoji__txt"></span>
           </div>
         </div>
         <div class="name">
-          <div class="name__full">Confidence Okoghenun</div>
-          <div class="name__username">cokoghenun</div>
+          <div class="name__full"></div>
+          <div class="name__username"></div>
         </div>
-        <div class="bio">Software Engineer | YouTuber</div>
+        <div class="bio"></div>
       </aside>
       <main>
         <div class="repo__top">
@@ -168,39 +161,9 @@
             </label>
           </div>
         </div>
-        <div class="repo__item">
-          <div class="repo__item__left">
-            <div class="repo__item__name">open-song-database-api</div>
-            <div class="repo__item__desc">
-              Welcome to the repository of the Open Song Database
-            </div>
-            <div class="repo__item__stats">
-              <div class="repo__item__lang">
-                <span class="dot dot--yellow"></span>
-                <span class="repo__item__lang__text"> JavaScript</span>
-              </div>
-              <div class="repo__item__stars">
-                <img src="icons/star.svg" alt="star" />
-                <span>1</span>
-              </div>
-              <div class="repo__item__upate">Updated 13 days ago</div>
-            </div>
-          </div>
-          <div class="repo__item__right">
-            <button>
-              <img src="icons/star.svg" alt="star" />
-              <span>Star</span>
-            </button>
-          </div>
-        </div>
+        <div class="repo__list"></div>
       </main>
     </div>
   </body>
-  <script>
-    const nav = document.querySelector('.breadcrum');
-    const options = document.querySelector('.nav__small__bottom');
-    nav.addEventListener('click', () => {
-      options.classList.toggle('hide');
-    });
-  </script>
+  <script src="script.js"></script>
 </html>

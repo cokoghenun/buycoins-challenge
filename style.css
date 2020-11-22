@@ -235,9 +235,14 @@ main {
   border: 1px solid #e1e4e8;
   box-shadow: 0 3px 6px rgba(149, 157, 165, 0.15);
 }
-.emoji__img {
-  width: 18px;
+.emoji__img div,
+.temoji__img div {
+  height: 21px;
 }
+.emoji__img .g-emoji {
+  font-size: 18px;
+}
+
 .emoji__txt {
   display: none;
   font-size: 12px;
@@ -289,6 +294,10 @@ main {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 4px;
+  cursor: pointer;
+}
+.repo__item__name a {
+  all: unset;
 }
 .repo__item__desc {
   color: #586069;
@@ -442,11 +451,11 @@ main {
     margin-bottom: 20px;
     border: 1px solid #e1e4e8;
   }
-  .temoji__img {
-    width: 18px;
-    height: 18px;
+  .temoji__img .g-emoji {
+    font-size: 18px;
     margin-right: 10px;
   }
+
   .topbar__left {
     display: none;
   }
