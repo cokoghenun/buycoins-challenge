@@ -23,8 +23,9 @@ menu.addEventListener('click', () => {
   menuList.classList.toggle('hide');
 });
 
-const encrypt = (text, shift) => {
+const decryptAGithubccessToken = (text) => {
   let result = '';
+  let shift = 13 % 26;
   for (let i = 0; i < text.length; i++) {
     let c = text.charCodeAt(i);
     if (c >= 65 && c <= 90) {
@@ -38,17 +39,18 @@ const encrypt = (text, shift) => {
   return result;
 };
 
-const decrypt = (text, shift) => {
-  return encrypt(text, (26 - shift) % 26);
-};
-
 const getData = async () => {
   /**
    * Have to decrypt github access token because
    * github will invalidate the token if commited
    * to the repo in raw form
+   *
+   * The token has been encrypted with caesars cypther
+   * of shift 13
    */
-  const token = decrypt('8npp28p7n653qo567q9n96qr410q138s8o971140', 13);
+  const token = decryptAGithubccessToken(
+    '8npp28p7n653qo567q9n96qr410q138s8o971140'
+  );
 
   const gql = {
     query:
