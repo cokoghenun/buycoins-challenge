@@ -16,6 +16,8 @@ const tprofileImg = document.querySelector('.tprofile__img');
 const tuserName = document.querySelector('.tname__username');
 const menuList = document.querySelector('.nav__small__bottom');
 const repoCount = document.querySelector('.topbar__item__count');
+const mainBody = document.querySelector('.mainbody');
+const spinner = document.querySelector('.spinner');
 
 menu.addEventListener('click', () => {
   menuList.classList.toggle('hide');
@@ -33,7 +35,7 @@ const getData = async () => {
     method: 'POST',
     body: JSON.stringify(gql),
     headers: {
-      Authorization: 'bearer b5f17883292ef60f9e677d9c29fcfa1fe145e7ee',
+      Authorization: 'bearer 60633727287295345af188406a37132c1146887f',
     },
   })
     .then((res) => res.json())
@@ -92,7 +94,8 @@ const getData = async () => {
     })
     .join('');
 
-  console.log(res);
+  spinner.classList.add('hide');
+  mainBody.classList.remove('hide');
 };
 
 getData();

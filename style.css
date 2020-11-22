@@ -12,6 +12,12 @@ nav {
   padding: 16px 32px;
   background-color: #24292e;
 }
+.spinner {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
 .nav__big {
   width: 100%;
   display: flex;

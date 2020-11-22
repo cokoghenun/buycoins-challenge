@@ -2,167 +2,178 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuyCoins Challenge</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    <title>BuyCoins Challenge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <nav>
-      <div class="nav__big">
-        <div class="left">
-          <div>
+    <img class="spinner" src="icons/spinner.svg" alt="" />
+    <div class="mainbody hide">
+      <nav>
+        <div class="nav__big">
+          <div class="left">
+            <div>
+              <img class="home" src="icons/github.svg" alt="home" />
+            </div>
+            <div class="search">
+              <label tabindex="1" class="search__label search__label--dark">
+                <input
+                  type="text"
+                  name="search"
+                  class="search__input"
+                  placeholder="Search or jump to.."
+                />
+                <img src="icons/slash.svg" alt="keyboard" />
+              </label>
+            </div>
+            <ul class="links">
+              <li>Pull requests</li>
+              <li>Issues</li>
+              <li>Marketplace</li>
+              <li>Explore</li>
+            </ul>
+          </div>
+          <div class="right">
+            <div class="icon icon--bell">
+              <img src="icons/bell.svg" alt="notificaitons" />
+              <span class="dot dot--blue"></span>
+            </div>
+            <div class="icon icon--caret icon--middle">
+              <img src="icons/plus.svg" alt="options" />
+              <span class="caret"></span>
+            </div>
+            <div class="icon icon--caret">
+              <img class="user" alt="settings" />
+              <span class="caret"></span>
+            </div>
+          </div>
+        </div>
+        <div class="nav__small">
+          <div class="nav__small__top">
+            <img class="breadcrum" src="icons/breadcrum.svg" alt="home" />
             <img class="home" src="icons/github.svg" alt="home" />
-          </div>
-          <div class="search">
-            <label tabindex="1" class="search__label search__label--dark">
-              <input
-                type="text"
-                name="search"
-                class="search__input"
-                placeholder="Search or jump to.."
-              />
-              <img src="icons/slash.svg" alt="keyboard" />
-            </label>
-          </div>
-          <ul class="links">
-            <li>Pull requests</li>
-            <li>Issues</li>
-            <li>Marketplace</li>
-            <li>Explore</li>
-          </ul>
-        </div>
-        <div class="right">
-          <div class="icon icon--bell">
-            <img src="icons/bell.svg" alt="notificaitons" />
-            <span class="dot dot--blue"></span>
-          </div>
-          <div class="icon icon--caret icon--middle">
-            <img src="icons/plus.svg" alt="options" />
-            <span class="caret"></span>
-          </div>
-          <div class="icon icon--caret">
-            <img class="user" alt="settings" />
-            <span class="caret"></span>
-          </div>
-        </div>
-      </div>
-      <div class="nav__small">
-        <div class="nav__small__top">
-          <img class="breadcrum" src="icons/breadcrum.svg" alt="home" />
-          <img class="home" src="icons/github.svg" alt="home" />
 
-          <div class="icon icon--bell">
-            <img src="icons/bell.svg" alt="notificaitons" />
-            <span class="dot dot--blue"></span>
+            <div class="icon icon--bell">
+              <img src="icons/bell.svg" alt="notificaitons" />
+              <span class="dot dot--blue"></span>
+            </div>
+          </div>
+          <div class="nav__small__bottom hide">
+            <div class="search">
+              <label tabindex="1" class="search__label search__label--dark">
+                <input
+                  type="text"
+                  name="search"
+                  class="search__input"
+                  placeholder="Search or jump to.."
+                />
+                <img src="icons/slash.svg" alt="keyboard" />
+              </label>
+            </div>
+            <ul class="links">
+              <li>Dashbard</li>
+              <li>Pull requests</li>
+              <li>Issues</li>
+              <li>Marketplace</li>
+              <li>Explore</li>
+              <li>Settings</li>
+              <li class="img">
+                <img alt="profile" />
+                <span>cokoghenun</span>
+              </li>
+              <li class="img">
+                <img src="icons/door.svg" alt="sign out" />
+                <span>Sign out</span>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="nav__small__bottom hide">
-          <div class="search">
-            <label tabindex="1" class="search__label search__label--dark">
-              <input
-                type="text"
-                name="search"
-                class="search__input"
-                placeholder="Search or jump to.."
-              />
-              <img src="icons/slash.svg" alt="keyboard" />
-            </label>
+      </nav>
+      <div class="tprofile">
+        <div class="tintro">
+          <img alt="profile image" class="tprofile__img" />
+          <div class="tname">
+            <div class="tname__full"></div>
+            <div class="tname__username"></div>
           </div>
-          <ul class="links">
-            <li>Dashbard</li>
-            <li>Pull requests</li>
-            <li>Issues</li>
-            <li>Marketplace</li>
-            <li>Explore</li>
-            <li>Settings</li>
-            <li class="img">
-              <img alt="profile" />
-              <span>cokoghenun</span>
-            </li>
-            <li class="img">
-              <img src="icons/door.svg" alt="sign out" />
-              <span>Sign out</span>
-            </li>
-          </ul>
         </div>
-      </div>
-    </nav>
-    <div class="tprofile">
-      <div class="tintro">
-        <img alt="profile image" class="tprofile__img" />
-        <div class="tname">
-          <div class="tname__full"></div>
-          <div class="tname__username"></div>
+        <div class="temoji">
+          <span class="temoji__img"></span>
+          <span class="temoji__txt"></span>
         </div>
+        <div class="tbio"></div>
       </div>
-      <div class="temoji">
-        <span class="temoji__img"></span>
-        <span class="temoji__txt"></span>
-      </div>
-      <div class="tbio"></div>
-    </div>
 
-    <div class="topbar">
-      <div class="topbar__left"></div>
-      <div class="topbar__right">
-        <div class="topbar__item">
-          <img src="icons/book.svg" alt="overview" class="topbar__item__icon" />
-          <span class="topbar__item__text">Overview</span>
-        </div>
-        <div class="topbar__item topbar__item--active">
-          <img
-            src="icons/book2.svg"
-            alt="repositories"
-            class="topbar__item__icon"
-          />
-          <span class="topbar__item__text">Repositories</span>
-          <span class="topbar__item__count"></span>
-        </div>
-        <div class="topbar__item">
-          <img
-            src="icons/chart.svg"
-            alt="projects"
-            class="topbar__item__icon"
-          />
-          <span class="topbar__item__text">Projects</span>
-        </div>
-        <div class="topbar__item">
-          <img src="icons/cube.svg" alt="packages" class="topbar__item__icon" />
-          <span class="topbar__item__text">Packages</span>
+      <div class="topbar">
+        <div class="topbar__left"></div>
+        <div class="topbar__right">
+          <div class="topbar__item">
+            <img
+              src="icons/book.svg"
+              alt="overview"
+              class="topbar__item__icon"
+            />
+            <span class="topbar__item__text">Overview</span>
+          </div>
+          <div class="topbar__item topbar__item--active">
+            <img
+              src="icons/book2.svg"
+              alt="repositories"
+              class="topbar__item__icon"
+            />
+            <span class="topbar__item__text">Repositories</span>
+            <span class="topbar__item__count"></span>
+          </div>
+          <div class="topbar__item">
+            <img
+              src="icons/chart.svg"
+              alt="projects"
+              class="topbar__item__icon"
+            />
+            <span class="topbar__item__text">Projects</span>
+          </div>
+          <div class="topbar__item">
+            <img
+              src="icons/cube.svg"
+              alt="packages"
+              class="topbar__item__icon"
+            />
+            <span class="topbar__item__text">Packages</span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="body">
-      <aside>
-        <div class="profile">
-          <img alt="profile image" class="profile__img" />
-          <div class="emoji">
-            <span class="emoji__img"></span>
-            <span class="emoji__txt"></span>
+      <div class="body">
+        <aside>
+          <div class="profile">
+            <img alt="profile image" class="profile__img" />
+            <div class="emoji">
+              <span class="emoji__img"></span>
+              <span class="emoji__txt"></span>
+            </div>
           </div>
-        </div>
-        <div class="name">
-          <div class="name__full"></div>
-          <div class="name__username"></div>
-        </div>
-        <div class="bio"></div>
-      </aside>
-      <main>
-        <div class="repo__top">
-          <div class="search">
-            <label tabindex="1" class="search__label">
-              <input
-                type="text"
-                name="search"
-                class="search__input"
-                placeholder="Find a repository..."
-              />
-            </label>
+          <div class="name">
+            <div class="name__full"></div>
+            <div class="name__username"></div>
           </div>
-        </div>
-        <div class="repo__list"></div>
-      </main>
+          <div class="bio"></div>
+        </aside>
+        <main>
+          <div class="repo__top">
+            <div class="search">
+              <label tabindex="1" class="search__label">
+                <input
+                  type="text"
+                  name="search"
+                  class="search__input"
+                  placeholder="Find a repository..."
+                />
+              </label>
+            </div>
+          </div>
+          <div class="repo__list"></div>
+        </main>
+      </div>
     </div>
   </body>
   <script src="script.js"></script>
