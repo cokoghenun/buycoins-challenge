@@ -24,6 +24,10 @@ menu.addEventListener('click', () => {
 });
 
 const getData = async () => {
+  const token =
+    location.protocol === 'http'
+      ? '9014b29d11fa828cfdced1760d070bfa10fae70e'
+      : '3d49f039df0b23704e3d65e7b0135f6d25d2577b';
   const gql = {
     query:
       '{\n  user(login: "cokoghenun") {\n    bio\n    avatarUrl\n    name\n    login\n   status {\n      message\n      emojiHTML\n    }\n    repositories(orderBy: {field: CREATED_AT, direction: DESC}, first: 20) {\n      totalCount\n      nodes {\n        name\n        url\n        description\n        primaryLanguage {\n          color\n          name\n        }\n        stargazers {\n          totalCount\n        }\n      }\n    }\n  }\n}\n',
@@ -35,7 +39,7 @@ const getData = async () => {
     method: 'POST',
     body: JSON.stringify(gql),
     headers: {
-      Authorization: 'bearer 60633727287295345af188406a37132c1146887f',
+      Authorization: `bearer ${token}`,
     },
   })
     .then((res) => res.json())
